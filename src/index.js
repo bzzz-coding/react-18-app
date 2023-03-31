@@ -28,26 +28,55 @@ const games = [
 ];
 
 const BoardgameList = () => {
+  const valueToPassDown = 'Passed down from BoardgameList!';
+  const logValue = (title) => {
+    console.log(`${title} and ${valueToPassDown}`);
+  };
   return (
     <>
       <EventComponent />
       <section className='gamelist'>
-        {games.map(game => <Boardgame {...game} key={game.id} />)}
+        {games.map(game => <Boardgame {...game} key={game.id} handleClick={logValue.bind(null, game.title)} />)}
       </section>
     </>
-  )
+  );
 };
 
-const EventComponent = () => <h1>Event</h1>
+const EventComponent = () => {
+  const handleInputChange = (e) => {
+    console.log(e.target);
+    console.log(`Input: ${e.target.value}`);
+  };
 
-const Boardgame = ({ img, title, author, rating }) => {
+  // const handleClick = () => {
+  //   alert('Clicked!');
+  // };
 
+  const handleFormSubmission = (e) => {
+    e.preventDefault();
+    console.log('Form submitted');
+  }
+
+  return (
+    <section>
+      <form onSubmit={handleFormSubmission}>
+        <h1>Add Game</h1>
+        <input type="text" name="title" placeholder="Game Title" onChange={handleInputChange} />
+        <button type='submit'>Submit</button>
+      </form>
+      <button type='button' onClick={(e) => {alert(`${e.target.type} got clicked!`);}}>Click Me</button>
+    </section>
+  );
+};
+
+const Boardgame = ({ img, title, author, rating, handleClick }) => {
   return (
     <div className="game">
       <img src={img} alt={title} />
       <h2>{title.toUpperCase()}</h2>
       <h4>{author}</h4>
       <p>{rating}</p>
+      <button onClick={handleClick}>Log Message</button>
     </div>
   );
 };
