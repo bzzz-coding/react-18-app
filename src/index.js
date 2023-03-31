@@ -31,12 +31,13 @@ const BoardgameList = () => {
   const valueToPassDown = 'Passed down from BoardgameList!';
   const logValue = (title) => {
     console.log(`${title} and ${valueToPassDown}`);
-  };
+  }; // setting up a function that will be passed down to a component as a prop, and logs value set in the parent component and value that belongs to the child component
   return (
     <>
       <EventComponent />
       <section className='gamelist'>
-        {games.map(game => <Boardgame {...game} key={game.id} handleClick={logValue.bind(null, game.title)} />)}
+        {games.map(game => <Boardgame {...game} key={game.id} handleClick={logValue.bind(null, game.title)} />)} 
+        {/* by using fn.bind(null, argument), I can pass in an argument without immediately invoking the function */}
       </section>
     </>
   );
