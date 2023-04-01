@@ -50,7 +50,7 @@ const Boardgame = ({ img, title, author, rating, getGame, id }) => {
       <h2>{title.toUpperCase()}</h2>
       <h4>{author}</h4>
       <p>{rating}</p>
-      <button onClick={() => getGame(id)}>Log Message</button>
+      <button onClick={() => getGame(id)}>Log Game Info</button>
     </div>
   );
 };
