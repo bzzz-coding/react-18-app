@@ -1,7 +1,7 @@
 const Boardgame = ({ img, title, author, rating, order }) => {
   return (
     <div className="game">
-      <p className="order">#{order}</p>
+      <p className="order"># {order}</p>
       <section className="details">
         <img src={img} alt={title} />
         <h2>{title.toUpperCase()}</h2>

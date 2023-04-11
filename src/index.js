@@ -11,7 +11,8 @@ const BoardgameList = () => {
 
   return (
     <>
-      <EventComponent />
+      {/* <EventComponent /> */}
+      <h1 className="pageTitle">My Favorite Board Games</h1>
       <section className='gamelist'>
         {games.map((game, index) => <Boardgame {...game} key={game.id} order={index + 1} />)}
       </section>
