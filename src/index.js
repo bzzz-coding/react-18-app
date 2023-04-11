@@ -28,10 +28,9 @@ const games = [
 ];
 
 const BoardgameList = () => {
-  const valueToPassDown = 'Passed down from BoardgameList!';
   const logValue = (title) => {
-    console.log(`${title} and ${valueToPassDown}`);
-  }; // setting up a function that will be passed down to a component as a prop, and logs value set in the parent component and value that belongs to the child component
+    console.log(title);
+  }; // setting up a function that will be passed down to a component as a prop, and logs value that belongs to the child component
   return (
     <>
       <EventComponent />
