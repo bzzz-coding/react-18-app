@@ -13,7 +13,7 @@ const BoardgameList = () => {
     <>
       <EventComponent />
       <section className='gamelist'>
-        {games.map(game => <Boardgame {...game} key={game.id} />)}
+        {games.map((game, index) => <Boardgame {...game} key={game.id} order={index + 1} />)}
       </section>
     </>
   );
