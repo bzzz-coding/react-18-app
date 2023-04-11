@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e00a9e00.css",
+    "main.js": "/static/js/main.bfd6f0be.js",
+    "static/media/dominion-seaside.jpeg": "/static/media/dominion-seaside.99b7bc0d66f7bd47533f.jpeg",
+    "static/media/dominion-intrigue.jpg": "/static/media/dominion-intrigue.debb8bbab317c692a9da.jpg",
+    "static/media/dominion.jpeg": "/static/media/dominion.6e68513986bb7f6a601b.jpeg",
+    "index.html": "/index.html",
+    "main.e00a9e00.css.map": "/static/css/main.e00a9e00.css.map",
+    "main.bfd6f0be.js.map": "/static/js/main.bfd6f0be.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e00a9e00.css",
+    "static/js/main.bfd6f0be.js"
+  ]
+}
